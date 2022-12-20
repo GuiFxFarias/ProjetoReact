@@ -1,0 +1,15 @@
+.listItens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.listItens li {
+  margin: 0 0.5em;
+}
+
+li svg {
+  font-size: 1.5em;
+  cursor: pointer;
+}
