@@ -1,14 +1,23 @@
 import "./App.css";
-import OutraLista from "./components/OutraLista";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Contato from "./pages/Contato";
+import Sobre from "./pages/Sobre";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 function App() {
-  const meusItens = ['React', 'Vue', 'Angular'];
-
   return (
-    <div className="App">
-      <h1>Renderização de listas</h1>
-      <OutraLista itens={meusItens} />
-    </div>
+    <Router>
+      <Navbar></Navbar>
+      <Routes>
+        <Route excat path="/" element={<Home />}></Route>
+        <Route path="/sobre" element={<Sobre />}></Route>
+        <Route path="/contato" element={<Contato />}></Route>
+      </Routes>
+      <Footer></Footer>
+    </Router>
   );
 }
 
